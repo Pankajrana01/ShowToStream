@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Light.ttf">
+            <string>Inter-Light</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Who Watching View Controller-->
+        <scene sceneID="QiC-Y8-bb3">
+            <objects>
+                <viewController storyboardIdentifier="WhoWatchingViewController" id="up6-nC-N6F" customClass="WhoWatchingViewController" customModule="ShowToStream" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="z3K-sO-Ih1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who’s Watching?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ijj-O7-O4e" userLabel="labelHeader">
+                                <rect key="frame" x="82.666666666666671" y="211.33333333333334" width="248.66666666666663" height="30.333333333333343"/>
+                                <fontDescription key="fontDescription" name="Inter-Light" family="Inter" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Inter-Light" family="Inter" pointSize="36"/>
+                                </variation>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dJt-Qp-ydH">
+                                <rect key="frame" x="62" y="301.66666666666674" width="290" height="358.33333333333326"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="290" id="bM1-4h-6Qi"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="hsV-YC-4Ja">
+                                    <size key="itemSize" width="115" height="135"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="xsp-SD-YQh">
+                                        <rect key="frame" x="0.0" y="0.0" width="115" height="135"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="yyH-7C-9Dg">
+                                            <rect key="frame" x="0.0" y="0.0" width="115" height="135"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="customSize" width="115" height="135"/>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="up6-nC-N6F" id="B18-XN-6vu"/>
+                                    <outlet property="delegate" destination="up6-nC-N6F" id="pdB-54-ZFS"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="J4q-ZV-FEZ"/>
+                        <color key="backgroundColor" name="AppLightBlack"/>
+                        <constraints>
+                            <constraint firstItem="dJt-Qp-ydH" firstAttribute="top" secondItem="ijj-O7-O4e" secondAttribute="bottom" constant="60" id="BXK-Au-RO5"/>
+                            <constraint firstItem="ijj-O7-O4e" firstAttribute="width" secondItem="z3K-sO-Ih1" secondAttribute="width" multiplier="0.6" id="LR5-pW-c9x"/>
+                            <constraint firstItem="dJt-Qp-ydH" firstAttribute="centerX" secondItem="J4q-ZV-FEZ" secondAttribute="centerX" id="ObK-0y-niD"/>
+                            <constraint firstItem="ijj-O7-O4e" firstAttribute="centerY" secondItem="J4q-ZV-FEZ" secondAttribute="centerY" multiplier="0.5" id="Py2-lz-TEa"/>
+                            <constraint firstItem="ijj-O7-O4e" firstAttribute="centerX" secondItem="J4q-ZV-FEZ" secondAttribute="centerX" id="gci-5E-sml"/>
+                            <constraint firstItem="dJt-Qp-ydH" firstAttribute="height" secondItem="z3K-sO-Ih1" secondAttribute="height" multiplier="0.4" id="k7r-hk-igq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="dJt-Qp-ydH" id="iVo-Da-Cno"/>
+                        <outlet property="collectionViewWidth" destination="bM1-4h-6Qi" id="vod-Ja-xR6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="65V-L2-HSA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-207.19999999999999" y="-41.829085457271368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AppLightBlack">
+            <color red="0.12941176470588237" green="0.12941176470588237" blue="0.12941176470588237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="exE-0T-iKj">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Bold.ttf">
+            <string>Inter-Bold</string>
+        </array>
+        <array key="Inter-Regular.ttf">
+            <string>Inter-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Preference View Controller-->
+        <scene sceneID="2dh-dN-g1X">
+            <objects>
+                <viewController storyboardIdentifier="PreferenceViewController" id="exE-0T-iKj" customClass="PreferenceViewController" customModule="ShowToStream" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XLS-J0-f41">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jfi-9w-FO4" userLabel="headerView">
+                                <rect key="frame" x="0.0" y="44" width="375" height="51"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kp0-n0-GIf" userLabel="backButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="79" height="51"/>
+                                        <inset key="contentEdgeInsets" minX="16" minY="-4" maxX="0.0" maxY="4"/>
+                                        <state key="normal" title=" Back" image="ic_back"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="backButtonTapped:" destination="exE-0T-iKj" eventType="touchUpInside" id="Nyz-Nk-lQG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tzm-r8-5UP" userLabel="backButton">
+                                        <rect key="frame" x="290" y="0.0" width="75" height="51"/>
+                                        <inset key="contentEdgeInsets" minX="16" minY="-4" maxX="0.0" maxY="4"/>
+                                        <state key="normal" title="SKIP"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="skipButtonTapped:" destination="exE-0T-iKj" eventType="touchUpInside" id="hjQ-bX-dRS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="AppLightBlack"/>
+                                <constraints>
+                                    <constraint firstItem="kp0-n0-GIf" firstAttribute="leading" secondItem="jfi-9w-FO4" secondAttribute="leading" id="7f5-lE-jZy"/>
+                                    <constraint firstAttribute="bottom" secondItem="kp0-n0-GIf" secondAttribute="bottom" id="Dbk-Xt-egu"/>
+                                    <constraint firstAttribute="trailing" secondItem="Tzm-r8-5UP" secondAttribute="trailing" constant="10" id="Dgz-Dw-E8i"/>
+                                    <constraint firstItem="Tzm-r8-5UP" firstAttribute="height" secondItem="jfi-9w-FO4" secondAttribute="height" id="HGZ-Ck-nUS"/>
+                                    <constraint firstItem="kp0-n0-GIf" firstAttribute="top" secondItem="jfi-9w-FO4" secondAttribute="top" id="NtY-rD-UFo"/>
+                                    <constraint firstItem="kp0-n0-GIf" firstAttribute="height" secondItem="jfi-9w-FO4" secondAttribute="height" id="OYS-RC-cKp"/>
+                                    <constraint firstItem="Tzm-r8-5UP" firstAttribute="width" secondItem="jfi-9w-FO4" secondAttribute="width" multiplier="0.2" id="Ovn-AK-McR"/>
+                                    <constraint firstItem="Tzm-r8-5UP" firstAttribute="centerY" secondItem="jfi-9w-FO4" secondAttribute="centerY" id="YIA-FL-3Qc"/>
+                                    <constraint firstAttribute="height" constant="51" id="x37-LZ-jeF"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1bg-Sn-qFQ">
+                                <rect key="frame" x="0.0" y="95" width="375" height="573.66666666666663"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="6" minimumInteritemSpacing="0.0" id="cUp-hd-2I9" customClass="DGCollectionViewLeftAlignFlowLayout" customModule="DGCollectionViewLeftAlignFlowLayout">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="12" minY="0.0" maxX="12" maxY="20"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="PtU-uG-xqY">
+                                        <rect key="frame" x="12" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Sbp-wP-MEo">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4eA-XU-u3E">
+                                <rect key="frame" x="0.0" y="668.66666666666663" width="375" height="104.33333333333337"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap once on the category you like" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tn5-s3-GpM">
+                                        <rect key="frame" x="40" y="11.999999999999998" width="295" height="16.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
+                                        <color key="textColor" name="AppGray"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="18"/>
+                                        </variation>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TEe-BA-rpo" customClass="GradientView" customModule="ShowToStream" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="40.333333333333371" width="335" height="56"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="49A-3a-boa">
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="56"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="14"/>
+                                                <state key="normal" title="Confirm">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="6"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="18"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="confirmButtonTapped:" destination="exE-0T-iKj" eventType="touchUpInside" id="lKt-ih-4nJ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="49A-3a-boa" secondAttribute="bottom" id="AeG-H6-fdz"/>
+                                            <constraint firstItem="49A-3a-boa" firstAttribute="leading" secondItem="TEe-BA-rpo" secondAttribute="leading" id="C0C-tn-je7"/>
+                                            <constraint firstAttribute="trailing" secondItem="49A-3a-boa" secondAttribute="trailing" id="NqE-ts-hmZ"/>
+                                            <constraint firstAttribute="height" constant="56" id="ZFh-fm-rUb"/>
+                                            <constraint firstItem="49A-3a-boa" firstAttribute="top" secondItem="TEe-BA-rpo" secondAttribute="top" id="fsU-8Y-8iK"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                <color key="value" name="AppVoilet"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                <color key="value" name="AppVoiletDark"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="startLocation">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="endLocation">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="horizontalMode" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="TEe-BA-rpo" firstAttribute="top" secondItem="tn5-s3-GpM" secondAttribute="bottom" constant="12" id="2uj-49-whj"/>
+                                    <constraint firstItem="tn5-s3-GpM" firstAttribute="leading" secondItem="4eA-XU-u3E" secondAttribute="leading" constant="40" id="ANS-ZZ-KJH"/>
+                                    <constraint firstItem="tn5-s3-GpM" firstAttribute="top" secondItem="4eA-XU-u3E" secondAttribute="top" constant="12" id="G8h-zp-K7j"/>
+                                    <constraint firstAttribute="trailing" secondItem="tn5-s3-GpM" secondAttribute="trailing" constant="40" id="MIr-oc-usf"/>
+                                    <constraint firstItem="TEe-BA-rpo" firstAttribute="leading" secondItem="4eA-XU-u3E" secondAttribute="leading" constant="20" id="NWg-h0-p6W"/>
+                                    <constraint firstAttribute="bottom" secondItem="TEe-BA-rpo" secondAttribute="bottom" constant="8" id="Vzk-Nr-MXi"/>
+                                    <constraint firstAttribute="trailing" secondItem="TEe-BA-rpo" secondAttribute="trailing" constant="20" id="vhi-gA-ToB"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2Lk-L4-cLB"/>
+                        <color key="backgroundColor" name="AppLightBlack"/>
+                        <constraints>
+                            <constraint firstItem="1bg-Sn-qFQ" firstAttribute="top" secondItem="jfi-9w-FO4" secondAttribute="bottom" id="8Nh-k5-Nh1"/>
+                            <constraint firstItem="jfi-9w-FO4" firstAttribute="leading" secondItem="XLS-J0-f41" secondAttribute="leading" id="OBE-Z5-bSZ"/>
+                            <constraint firstItem="1bg-Sn-qFQ" firstAttribute="leading" secondItem="2Lk-L4-cLB" secondAttribute="leading" id="hxX-9Z-Oxd"/>
+                            <constraint firstItem="2Lk-L4-cLB" firstAttribute="trailing" secondItem="4eA-XU-u3E" secondAttribute="trailing" id="ohY-8g-fGe"/>
+                            <constraint firstItem="4eA-XU-u3E" firstAttribute="top" secondItem="1bg-Sn-qFQ" secondAttribute="bottom" id="pso-b6-NIB"/>
+                            <constraint firstItem="1bg-Sn-qFQ" firstAttribute="trailing" secondItem="2Lk-L4-cLB" secondAttribute="trailing" id="qEQ-vt-urs"/>
+                            <constraint firstItem="4eA-XU-u3E" firstAttribute="leading" secondItem="2Lk-L4-cLB" secondAttribute="leading" id="rel-8X-yHN"/>
+                            <constraint firstItem="2Lk-L4-cLB" firstAttribute="bottom" secondItem="4eA-XU-u3E" secondAttribute="bottom" constant="5" id="uXh-RX-V1W"/>
+                            <constraint firstItem="jfi-9w-FO4" firstAttribute="top" secondItem="2Lk-L4-cLB" secondAttribute="top" id="xsd-0e-ubF"/>
+                            <constraint firstAttribute="trailing" secondItem="jfi-9w-FO4" secondAttribute="trailing" id="yRf-q9-mhu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="kp0-n0-GIf" id="602-cL-VaD"/>
+                        <outlet property="collectionView" destination="1bg-Sn-qFQ" id="Sol-Xo-5wG"/>
+                        <outlet property="headerViewHeight" destination="x37-LZ-jeF" id="R9m-Ps-yCJ"/>
+                        <outlet property="skipButton" destination="Tzm-r8-5UP" id="j6w-vl-e9B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pfn-BG-hDQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-271.19999999999999" y="-61.330049261083744"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_back" width="18" height="24"/>
+        <namedColor name="AppGray">
+            <color red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppLightBlack">
+            <color red="0.12941176470588237" green="0.12941176470588237" blue="0.12941176470588237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppVoilet">
+            <color red="0.40784313725490196" green="0.22352941176470589" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppVoiletDark">
+            <color red="0.28235294117647058" green="0.13333333333333333" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

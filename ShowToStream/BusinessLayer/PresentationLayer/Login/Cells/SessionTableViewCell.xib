@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Bold.ttf">
+            <string>Inter-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="SessionTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="55" id="dbi-B9-JDS" customClass="SessionTableViewCell" customModule="ShowToStream" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="430" height="55"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dbi-B9-JDS" id="zvc-G6-Qf3">
+                <rect key="frame" x="0.0" y="0.0" width="430" height="55"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6wD-00-S3D">
+                        <rect key="frame" x="20" y="5" width="390" height="45"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_checkbox_active" translatesAutoresizingMaskIntoConstraints="NO" id="ky5-sv-TOJ">
+                                <rect key="frame" x="16" y="14.5" width="16" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="Dw9-zW-wNC"/>
+                                    <constraint firstAttribute="width" constant="16" id="xwx-PG-gL0"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jMz-dv-DK0">
+                                <rect key="frame" x="44" y="14.5" width="334" height="16.5"/>
+                                <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ky5-sv-TOJ" firstAttribute="centerY" secondItem="6wD-00-S3D" secondAttribute="centerY" id="6zQ-7R-IEE"/>
+                            <constraint firstItem="jMz-dv-DK0" firstAttribute="leading" secondItem="ky5-sv-TOJ" secondAttribute="trailing" constant="12" id="HrI-m2-4QB"/>
+                            <constraint firstItem="jMz-dv-DK0" firstAttribute="centerY" secondItem="ky5-sv-TOJ" secondAttribute="centerY" id="bFs-c7-dRb"/>
+                            <constraint firstItem="ky5-sv-TOJ" firstAttribute="leading" secondItem="6wD-00-S3D" secondAttribute="leading" constant="16" id="vOl-T6-pDn"/>
+                            <constraint firstAttribute="trailing" secondItem="jMz-dv-DK0" secondAttribute="trailing" constant="12" id="wuG-cJ-U7N"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="6"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fa-7B-W4C">
+                        <rect key="frame" x="20" y="10" width="390" height="45"/>
+                        <color key="backgroundColor" name="AppVoilet"/>
+                        <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="14"/>
+                        <state key="normal" title="Confirm">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="6"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="6wD-00-S3D" firstAttribute="top" secondItem="zvc-G6-Qf3" secondAttribute="top" constant="5" id="AYQ-EP-bD8"/>
+                    <constraint firstAttribute="bottom" secondItem="9fa-7B-W4C" secondAttribute="bottom" id="Esf-t0-gNW"/>
+                    <constraint firstAttribute="trailing" secondItem="9fa-7B-W4C" secondAttribute="trailing" constant="20" id="Fr4-Wh-wOj"/>
+                    <constraint firstItem="9fa-7B-W4C" firstAttribute="top" secondItem="zvc-G6-Qf3" secondAttribute="top" constant="10" id="TPn-RQ-WgM"/>
+                    <constraint firstItem="6wD-00-S3D" firstAttribute="leading" secondItem="zvc-G6-Qf3" secondAttribute="leading" constant="20" id="VWM-Fv-a18"/>
+                    <constraint firstAttribute="trailing" secondItem="6wD-00-S3D" secondAttribute="trailing" constant="20" id="dm8-xb-LHA"/>
+                    <constraint firstItem="9fa-7B-W4C" firstAttribute="leading" secondItem="zvc-G6-Qf3" secondAttribute="leading" constant="20" id="m5b-7B-bnG"/>
+                    <constraint firstAttribute="bottom" secondItem="6wD-00-S3D" secondAttribute="bottom" constant="5" id="u6y-wM-n2z"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" name="AppLightBlack"/>
+            <connections>
+                <outlet property="bgView" destination="6wD-00-S3D" id="bEh-LD-mYx"/>
+                <outlet property="confrimButton" destination="9fa-7B-W4C" id="1Sv-X6-2Ui"/>
+                <outlet property="selectImage" destination="ky5-sv-TOJ" id="OkO-cB-DFw"/>
+                <outlet property="sessionName" destination="jMz-dv-DK0" id="nPE-0S-WWA"/>
+            </connections>
+            <point key="canvasLocation" x="-382.60869565217394" y="94.084821428571431"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_checkbox_active" width="16" height="16"/>
+        <namedColor name="AppLightBlack">
+            <color red="0.12941176470588237" green="0.12941176470588237" blue="0.12941176470588237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppVoilet">
+            <color red="0.40784313725490196" green="0.22352941176470589" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

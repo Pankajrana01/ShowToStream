@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Light.ttf">
+            <string>Inter-Light</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Succes Screen View Controller-->
+        <scene sceneID="vXm-A6-nHi">
+            <objects>
+                <viewController storyboardIdentifier="SuccesScreenViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="U6M-py-BZV" customClass="SuccesScreenViewController" customModule="ShowToStream" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4gB-Lj-8JT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VIx-fb-qua">
+                                <rect key="frame" x="0.0" y="10" width="414" height="886"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pkl-az-r8q">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
+                                        <subviews>
+                                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r8c-HL-cDP">
+                                                <rect key="frame" x="185" y="13" width="44" height="4"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="44" id="I2V-zU-1lZ"/>
+                                                    <constraint firstAttribute="height" constant="4" id="Ot8-Pd-nrM"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="r8c-HL-cDP" firstAttribute="centerX" secondItem="pkl-az-r8q" secondAttribute="centerX" id="Uyg-93-4aE"/>
+                                            <constraint firstItem="r8c-HL-cDP" firstAttribute="centerY" secondItem="pkl-az-r8q" secondAttribute="centerY" id="W38-f0-1xm"/>
+                                            <constraint firstAttribute="height" constant="30" id="cLR-wj-zTL"/>
+                                        </constraints>
+                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_tick" translatesAutoresizingMaskIntoConstraints="NO" id="Hoz-3O-g4q">
+                                        <rect key="frame" x="163" y="310.5" width="88" height="88"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A8K-LV-AVv" userLabel="Thank you for your  interest!">
+                                        <rect key="frame" x="62" y="414.5" width="290" height="61"/>
+                                        <string key="text">Thank you for your 
+interest!</string>
+                                        <fontDescription key="fontDescription" name="Inter-Light" family="Inter" pointSize="26"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Inter-Light" family="Inter" pointSize="30"/>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We have received your request and will send you an email with the next steps." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50J-El-RJp">
+                                        <rect key="frame" x="72.5" y="491.5" width="269" height="28"/>
+                                        <fontDescription key="fontDescription" name="Inter-Light" family="Inter" pointSize="12"/>
+                                        <color key="textColor" name="AppGray"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Inter-Light" family="Inter" pointSize="16"/>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Hoz-3O-g4q" firstAttribute="centerX" secondItem="VIx-fb-qua" secondAttribute="centerX" id="0HN-4B-hOh"/>
+                                    <constraint firstItem="Hoz-3O-g4q" firstAttribute="centerY" secondItem="VIx-fb-qua" secondAttribute="centerY" multiplier="0.8" id="4sp-Xd-bme"/>
+                                    <constraint firstItem="50J-El-RJp" firstAttribute="top" secondItem="A8K-LV-AVv" secondAttribute="bottom" constant="16" id="A5f-nC-uWB"/>
+                                    <constraint firstItem="pkl-az-r8q" firstAttribute="width" secondItem="VIx-fb-qua" secondAttribute="width" id="Coe-i5-bD6"/>
+                                    <constraint firstItem="pkl-az-r8q" firstAttribute="centerX" secondItem="VIx-fb-qua" secondAttribute="centerX" id="HXQ-fo-gWF"/>
+                                    <constraint firstItem="A8K-LV-AVv" firstAttribute="centerX" secondItem="Hoz-3O-g4q" secondAttribute="centerX" id="JLa-4r-aIP"/>
+                                    <constraint firstItem="A8K-LV-AVv" firstAttribute="width" secondItem="VIx-fb-qua" secondAttribute="width" multiplier="0.7" id="VP4-8c-6PQ"/>
+                                    <constraint firstItem="50J-El-RJp" firstAttribute="width" secondItem="VIx-fb-qua" secondAttribute="width" multiplier="0.65" id="e22-95-fsv"/>
+                                    <constraint firstItem="pkl-az-r8q" firstAttribute="top" secondItem="VIx-fb-qua" secondAttribute="top" id="fJT-6j-hY7"/>
+                                    <constraint firstItem="50J-El-RJp" firstAttribute="centerX" secondItem="A8K-LV-AVv" secondAttribute="centerX" id="gOb-BU-bLx"/>
+                                    <constraint firstItem="A8K-LV-AVv" firstAttribute="top" secondItem="Hoz-3O-g4q" secondAttribute="bottom" constant="16" id="y1n-O5-ckc"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DL2-gT-XOO"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VIx-fb-qua" firstAttribute="centerX" secondItem="DL2-gT-XOO" secondAttribute="centerX" id="QsW-JT-kbl"/>
+                            <constraint firstItem="VIx-fb-qua" firstAttribute="height" secondItem="4gB-Lj-8JT" secondAttribute="height" multiplier="0.988839" id="T5D-WR-N8e"/>
+                            <constraint firstAttribute="bottom" secondItem="VIx-fb-qua" secondAttribute="bottom" id="sI8-7k-oRz"/>
+                            <constraint firstItem="VIx-fb-qua" firstAttribute="width" secondItem="4gB-Lj-8JT" secondAttribute="width" id="suW-Ja-h78"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="VIx-fb-qua" id="TdG-Pm-XAh"/>
+                        <outlet property="panHandlerView" destination="pkl-az-r8q" id="AfW-Sc-4kA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IXM-17-o77" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2142" y="61"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="img_tick" width="88" height="88"/>
+        <namedColor name="AppGray">
+            <color red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

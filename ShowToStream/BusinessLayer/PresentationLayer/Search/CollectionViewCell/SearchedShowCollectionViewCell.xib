@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Bold.ttf">
+            <string>Inter-Bold</string>
+        </array>
+        <array key="Inter-Regular.ttf">
+            <string>Inter-Regular</string>
+        </array>
+        <array key="Inter-SemiBold.ttf">
+            <string>Inter-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SearchedShowCollectionViewCell" customModule="ShowToStream" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="357" height="155"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="357" height="155"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Im2-Rv-LuR">
+                        <rect key="frame" x="0.0" y="3" width="357" height="149"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GuK-nb-qiw">
+                                <rect key="frame" x="8" y="16" width="187" height="117"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="GuK-nb-qiw" secondAttribute="height" multiplier="1.6" id="iTb-NH-xHd"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="del-cE-tvs">
+                                <rect key="frame" x="211" y="10" width="130" height="37"/>
+                                <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="18"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UII-XB-rgN">
+                                <rect key="frame" x="211" y="52" width="130" height="15"/>
+                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="12"/>
+                                <color key="textColor" name="AppGray"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="16"/>
+                                </variation>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rnr-Hz-z8L">
+                                <rect key="frame" x="211" y="74" width="107" height="26"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PlayWhite" translatesAutoresizingMaskIntoConstraints="NO" id="Ayx-OT-ztB">
+                                        <rect key="frame" x="5" y="4" width="12" height="18"/>
+                                        <color key="tintColor" name="AppOffWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="12" id="jQ8-gP-Pcy"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buy To Own" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gku-ou-x3j">
+                                        <rect key="frame" x="21" y="6.5" width="63.5" height="13"/>
+                                        <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="11"/>
+                                        <color key="textColor" name="AppLightGray"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="15"/>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5mP-AC-guN">
+                                        <rect key="frame" x="94.5" y="6.5" width="7.5" height="13"/>
+                                        <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="11"/>
+                                        <color key="textColor" name="AppLightGray"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="15"/>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="5mP-AC-guN" firstAttribute="centerY" secondItem="gku-ou-x3j" secondAttribute="centerY" id="4FG-j5-974"/>
+                                    <constraint firstItem="Ayx-OT-ztB" firstAttribute="leading" secondItem="rnr-Hz-z8L" secondAttribute="leading" constant="5" id="5th-Kw-ezY"/>
+                                    <constraint firstItem="Ayx-OT-ztB" firstAttribute="top" secondItem="rnr-Hz-z8L" secondAttribute="top" constant="4" id="G3g-Uh-m9Q"/>
+                                    <constraint firstAttribute="trailing" secondItem="5mP-AC-guN" secondAttribute="trailing" constant="5" id="Iab-dk-ys2"/>
+                                    <constraint firstItem="gku-ou-x3j" firstAttribute="leading" secondItem="Ayx-OT-ztB" secondAttribute="trailing" constant="4" id="QK0-0N-4ao"/>
+                                    <constraint firstItem="5mP-AC-guN" firstAttribute="leading" secondItem="gku-ou-x3j" secondAttribute="trailing" constant="10" id="iUA-GV-NDa"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ayx-OT-ztB" secondAttribute="bottom" constant="4" id="rC2-7M-ysj"/>
+                                    <constraint firstAttribute="height" constant="26" id="uZl-RE-NEd"/>
+                                    <constraint firstItem="gku-ou-x3j" firstAttribute="centerY" secondItem="Ayx-OT-ztB" secondAttribute="centerY" id="zU2-bX-cfy"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8AZ-qS-pPm">
+                                <rect key="frame" x="211" y="107" width="113" height="26"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PlayWhite" translatesAutoresizingMaskIntoConstraints="NO" id="sGj-OD-hEO">
+                                        <rect key="frame" x="5" y="4" width="12" height="18"/>
+                                        <color key="tintColor" name="AppOffWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="12" id="KY9-1G-juI"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pay Per View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5xa-GY-jo2">
+                                        <rect key="frame" x="21" y="6.5" width="69.5" height="13"/>
+                                        <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="11"/>
+                                        <color key="textColor" name="AppLightGray"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="15"/>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWu-gD-ter">
+                                        <rect key="frame" x="100.5" y="6.5" width="7.5" height="13"/>
+                                        <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="11"/>
+                                        <color key="textColor" name="AppLightGray"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="15"/>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="sGj-OD-hEO" secondAttribute="bottom" constant="4" id="8pZ-5g-Ori"/>
+                                    <constraint firstItem="sGj-OD-hEO" firstAttribute="top" secondItem="8AZ-qS-pPm" secondAttribute="top" constant="4" id="LBM-Zp-nKJ"/>
+                                    <constraint firstItem="gWu-gD-ter" firstAttribute="centerY" secondItem="5xa-GY-jo2" secondAttribute="centerY" id="Nrj-4I-nP3"/>
+                                    <constraint firstItem="gWu-gD-ter" firstAttribute="leading" secondItem="5xa-GY-jo2" secondAttribute="trailing" constant="10" id="WJO-Gx-cwj"/>
+                                    <constraint firstAttribute="trailing" secondItem="gWu-gD-ter" secondAttribute="trailing" constant="5" id="hLK-KV-mek"/>
+                                    <constraint firstItem="5xa-GY-jo2" firstAttribute="centerY" secondItem="sGj-OD-hEO" secondAttribute="centerY" id="qsB-9n-D6m"/>
+                                    <constraint firstItem="sGj-OD-hEO" firstAttribute="leading" secondItem="8AZ-qS-pPm" secondAttribute="leading" constant="5" id="rOg-Px-XSL"/>
+                                    <constraint firstItem="5xa-GY-jo2" firstAttribute="leading" secondItem="sGj-OD-hEO" secondAttribute="trailing" constant="4" id="rfS-0i-DvM"/>
+                                    <constraint firstAttribute="height" constant="26" id="zVV-wJ-rM4"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="AppLightBlack"/>
+                        <constraints>
+                            <constraint firstItem="del-cE-tvs" firstAttribute="leading" secondItem="GuK-nb-qiw" secondAttribute="trailing" constant="16" id="1Gd-or-RON"/>
+                            <constraint firstItem="8AZ-qS-pPm" firstAttribute="bottom" secondItem="GuK-nb-qiw" secondAttribute="bottom" id="8gK-R7-v2d"/>
+                            <constraint firstItem="rnr-Hz-z8L" firstAttribute="top" secondItem="UII-XB-rgN" secondAttribute="bottom" constant="7" id="Dwi-gK-JLB"/>
+                            <constraint firstItem="8AZ-qS-pPm" firstAttribute="leading" secondItem="GuK-nb-qiw" secondAttribute="trailing" constant="16" id="NUI-rX-HNe"/>
+                            <constraint firstItem="rnr-Hz-z8L" firstAttribute="leading" secondItem="GuK-nb-qiw" secondAttribute="trailing" constant="16" id="SF5-Ot-Ua9"/>
+                            <constraint firstAttribute="trailing" secondItem="del-cE-tvs" secondAttribute="trailing" constant="16" id="XIA-53-XHP"/>
+                            <constraint firstItem="GuK-nb-qiw" firstAttribute="top" secondItem="Im2-Rv-LuR" secondAttribute="top" constant="16" id="Ywz-iN-qJu"/>
+                            <constraint firstItem="del-cE-tvs" firstAttribute="top" secondItem="Im2-Rv-LuR" secondAttribute="top" constant="10" id="bv3-gh-VyP"/>
+                            <constraint firstItem="UII-XB-rgN" firstAttribute="leading" secondItem="GuK-nb-qiw" secondAttribute="trailing" constant="16" id="jSC-Gk-xfl"/>
+                            <constraint firstItem="UII-XB-rgN" firstAttribute="top" secondItem="del-cE-tvs" secondAttribute="bottom" constant="5" id="n4P-OG-omE"/>
+                            <constraint firstItem="8AZ-qS-pPm" firstAttribute="top" secondItem="rnr-Hz-z8L" secondAttribute="bottom" constant="7" id="r92-RK-TUH"/>
+                            <constraint firstAttribute="trailing" secondItem="UII-XB-rgN" secondAttribute="trailing" constant="16" id="uZj-eI-swK"/>
+                            <constraint firstItem="GuK-nb-qiw" firstAttribute="leading" secondItem="Im2-Rv-LuR" secondAttribute="leading" constant="8" id="whi-bI-Z4E"/>
+                            <constraint firstAttribute="bottom" secondItem="GuK-nb-qiw" secondAttribute="bottom" constant="16" id="wyu-er-uri"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="Im2-Rv-LuR" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="IHU-MN-6bW"/>
+                <constraint firstAttribute="bottom" secondItem="Im2-Rv-LuR" secondAttribute="bottom" constant="3" id="Odo-dk-da9"/>
+                <constraint firstItem="Im2-Rv-LuR" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="3" id="lUR-8N-IJn"/>
+                <constraint firstAttribute="trailing" secondItem="Im2-Rv-LuR" secondAttribute="trailing" id="lVZ-wM-caP"/>
+            </constraints>
+            <size key="customSize" width="357" height="325"/>
+            <connections>
+                <outlet property="BuyToOwnPriceLabel" destination="5mP-AC-guN" id="d9m-gp-oZE"/>
+                <outlet property="buyToOwnView" destination="rnr-Hz-z8L" id="nhN-kk-FiY"/>
+                <outlet property="posterImageView" destination="GuK-nb-qiw" id="N7b-5Y-air"/>
+                <outlet property="priceLabel" destination="gWu-gD-ter" id="nf3-T5-pBL"/>
+                <outlet property="producerLabel" destination="UII-XB-rgN" id="783-80-lM1"/>
+                <outlet property="showTitleLabel" destination="del-cE-tvs" id="95B-Gw-pmI"/>
+                <outlet property="watchNowView" destination="8AZ-qS-pPm" id="PDj-yu-ifB"/>
+            </connections>
+            <point key="canvasLocation" x="-141.30434782608697" y="-244.75446428571428"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="PlayWhite" width="28" height="28"/>
+        <namedColor name="AppGray">
+            <color red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppLightBlack">
+            <color red="0.12941176470588237" green="0.12941176470588237" blue="0.12941176470588237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppLightGray">
+            <color red="0.79607843137254897" green="0.79607843137254897" blue="0.79607843137254897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppOffWhite">
+            <color red="0.79607843137254897" green="0.79607843137254897" blue="0.79607843137254897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

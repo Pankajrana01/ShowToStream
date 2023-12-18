@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Medium.ttf">
+            <string>Inter-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="77" id="KGk-i7-Jjw" customClass="StreamQualityTableViewCell" customModule="ShowToStream" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="377" height="77"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="377" height="77"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pbu-yf-HO1">
+                        <rect key="frame" x="30" y="4" width="317" height="69"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_checkbox" translatesAutoresizingMaskIntoConstraints="NO" id="ZlF-nT-O6k">
+                                <rect key="frame" x="20" y="26.5" width="16" height="16"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3D-jJ-WQl">
+                                <rect key="frame" x="48" y="26" width="36.5" height="17"/>
+                                <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="18"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="f3D-jJ-WQl" firstAttribute="leading" secondItem="ZlF-nT-O6k" secondAttribute="trailing" constant="12" id="FPx-V7-Wvr"/>
+                            <constraint firstItem="f3D-jJ-WQl" firstAttribute="centerY" secondItem="ZlF-nT-O6k" secondAttribute="centerY" id="bPt-vn-boC"/>
+                            <constraint firstAttribute="height" priority="999" constant="40" id="tPm-4P-EHJ"/>
+                            <constraint firstItem="ZlF-nT-O6k" firstAttribute="leading" secondItem="pbu-yf-HO1" secondAttribute="leading" constant="20" id="tky-2V-alK"/>
+                            <constraint firstItem="ZlF-nT-O6k" firstAttribute="centerY" secondItem="pbu-yf-HO1" secondAttribute="centerY" id="xZ7-CW-r7s"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="6"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="pbu-yf-HO1" secondAttribute="bottom" constant="4" id="GOf-yX-Xie"/>
+                    <constraint firstItem="pbu-yf-HO1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="Z6D-2J-4C0"/>
+                    <constraint firstAttribute="trailing" secondItem="pbu-yf-HO1" secondAttribute="trailing" constant="30" id="gYT-MU-Qgc"/>
+                    <constraint firstItem="pbu-yf-HO1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="voY-Ao-GhF"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="checkboxImageView" destination="ZlF-nT-O6k" id="BAE-i3-OeI"/>
+                <outlet property="containerView" destination="pbu-yf-HO1" id="9A7-Bn-4zz"/>
+                <outlet property="nameLabel" destination="f3D-jJ-WQl" id="veN-8Y-UfF"/>
+            </connections>
+            <point key="canvasLocation" x="44.20289855072464" y="71.986607142857139"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_checkbox" width="16" height="16"/>
+    </resources>
+</document>

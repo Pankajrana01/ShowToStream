@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Regular.ttf">
+            <string>Inter-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="accountDetailTableCell" rowHeight="100" id="fOu-cc-f1c" customClass="AccountDetailTableCell" customModule="ShowToStream" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fOu-cc-f1c" id="uje-KM-hou">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zh9-HR-uZW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="86"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bank account number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJ2-eH-Pmh" userLabel="labelHeader">
+                                <rect key="frame" x="20" y="10" width="119" height="14"/>
+                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="12"/>
+                                <color key="textColor" name="AppGray"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="16"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1231231323123" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="enF-6K-faf" userLabel="labelHeader">
+                                <rect key="frame" x="20" y="29" width="116" height="19"/>
+                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="16"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="20"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oVL-zq-eP1">
+                                <rect key="frame" x="20" y="60" width="135" height="16"/>
+                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="12"/>
+                                <state key="normal" title="  Default for payments" image="checkbox">
+                                    <color key="titleColor" name="AppGray"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="16"/>
+                                </variation>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.16862745100000001" green="0.16862745100000001" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="bJ2-eH-Pmh" firstAttribute="leading" secondItem="zh9-HR-uZW" secondAttribute="leading" constant="20" id="4Cd-WI-eog"/>
+                            <constraint firstItem="bJ2-eH-Pmh" firstAttribute="top" secondItem="zh9-HR-uZW" secondAttribute="top" constant="10" id="A6w-JC-7Xr"/>
+                            <constraint firstItem="enF-6K-faf" firstAttribute="leading" secondItem="bJ2-eH-Pmh" secondAttribute="leading" id="S82-Tn-2G3"/>
+                            <constraint firstAttribute="bottom" secondItem="oVL-zq-eP1" secondAttribute="bottom" constant="10" id="SGa-0V-wU5"/>
+                            <constraint firstItem="oVL-zq-eP1" firstAttribute="leading" secondItem="enF-6K-faf" secondAttribute="leading" id="Wb2-jy-HKv"/>
+                            <constraint firstItem="enF-6K-faf" firstAttribute="top" secondItem="bJ2-eH-Pmh" secondAttribute="bottom" constant="5" id="mZb-uB-Y1x"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" name="AppLightBlack"/>
+                <constraints>
+                    <constraint firstItem="zh9-HR-uZW" firstAttribute="leading" secondItem="uje-KM-hou" secondAttribute="leading" id="9nJ-df-QSf"/>
+                    <constraint firstAttribute="bottom" secondItem="zh9-HR-uZW" secondAttribute="bottom" constant="2" id="ASr-u1-S3j"/>
+                    <constraint firstItem="zh9-HR-uZW" firstAttribute="top" secondItem="uje-KM-hou" secondAttribute="top" id="VfC-Fv-eRc"/>
+                    <constraint firstAttribute="trailing" secondItem="zh9-HR-uZW" secondAttribute="trailing" id="gfq-UO-TTP"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="accountNumber" destination="enF-6K-faf" id="7DO-qq-AjJ"/>
+                <outlet property="setDefaultAccount" destination="oVL-zq-eP1" id="2nP-Rg-asj"/>
+            </connections>
+            <point key="canvasLocation" x="-1555.072463768116" y="8.0357142857142847"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="checkbox" width="16" height="16"/>
+        <namedColor name="AppGray">
+            <color red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppLightBlack">
+            <color red="0.12941176470588237" green="0.12941176470588237" blue="0.12941176470588237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

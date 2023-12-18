@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Landing View Controller-->
+        <scene sceneID="gQn-kK-0zb">
+            <objects>
+                <tabBarController storyboardIdentifier="LandingViewController" id="7k9-9y-D9n" customClass="LandingViewController" customModule="ShowToStream" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0hT-oo-rpS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <outlet property="customTabBar" destination="y9I-vr-eod" id="cb0-16-6kM"/>
+                        <outlet property="selectionIndicatorView" destination="PoJ-sI-X0p" id="t9n-Js-sjq"/>
+                        <outletCollection property="tabBarButtons" destination="RQe-nG-tD8" collectionClass="NSMutableArray" id="vKf-lZ-FJ0"/>
+                        <outletCollection property="tabBarButtons" destination="ko3-4g-P8j" collectionClass="NSMutableArray" id="6MF-re-qba"/>
+                        <outletCollection property="tabBarButtons" destination="WX2-ga-k8h" collectionClass="NSMutableArray" id="4O7-KC-6ZY"/>
+                        <outletCollection property="selectionIndicatorViewCenterY" destination="gIR-CA-oTf" collectionClass="NSMutableArray" id="KCm-MR-c4b"/>
+                        <outletCollection property="selectionIndicatorViewCenterY" destination="kOY-S4-xEQ" collectionClass="NSMutableArray" id="e0T-wW-Oco"/>
+                        <outletCollection property="selectionIndicatorViewCenterY" destination="AfC-jO-OUZ" collectionClass="NSMutableArray" id="AJU-Im-9UA"/>
+                        <segue destination="qPe-CP-tv4" kind="relationship" relationship="viewControllers" id="84v-PS-UeZ"/>
+                        <segue destination="oJy-jl-Nj0" kind="relationship" relationship="viewControllers" id="7fa-m7-15h"/>
+                        <segue destination="bDc-VQ-QBf" kind="relationship" relationship="viewControllers" id="82Z-t5-aPe"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dUQ-Yl-HgP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="y9I-vr-eod">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="56"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PoJ-sI-X0p">
+                            <rect key="frame" x="0.0" y="0.0" width="80" height="56"/>
+                            <color key="backgroundColor" red="0.20392156862745098" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="LRw-lX-MPs">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="56"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQe-nG-tD8">
+                                    <rect key="frame" x="0.0" y="0.0" width="80" height="56"/>
+                                    <state key="normal" image="HomeActive"/>
+                                    <connections>
+                                        <action selector="tabBarButtonTapped:" destination="7k9-9y-D9n" eventType="touchUpInside" id="dth-pv-UjE"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ko3-4g-P8j">
+                                    <rect key="frame" x="80" y="0.0" width="80" height="56"/>
+                                    <state key="normal" image="Search"/>
+                                    <connections>
+                                        <action selector="tabBarButtonTapped:" destination="7k9-9y-D9n" eventType="touchUpInside" id="2kS-9g-xAM"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WX2-ga-k8h">
+                                    <rect key="frame" x="160" y="0.0" width="80" height="56"/>
+                                    <state key="normal" image="Watchlist"/>
+                                    <connections>
+                                        <action selector="tabBarButtonTapped:" destination="7k9-9y-D9n" eventType="touchUpInside" id="nr9-Ch-tOK"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="ONI-Tq-c9g"/>
+                    <color key="backgroundColor" name="AppLightBlack"/>
+                    <constraints>
+                        <constraint firstItem="PoJ-sI-X0p" firstAttribute="centerX" secondItem="WX2-ga-k8h" secondAttribute="centerX" priority="999" identifier="2" id="AfC-jO-OUZ"/>
+                        <constraint firstItem="LRw-lX-MPs" firstAttribute="trailing" secondItem="ONI-Tq-c9g" secondAttribute="trailing" id="K61-VA-Tde"/>
+                        <constraint firstItem="PoJ-sI-X0p" firstAttribute="width" secondItem="RQe-nG-tD8" secondAttribute="width" id="em5-Tz-5ji"/>
+                        <constraint firstItem="PoJ-sI-X0p" firstAttribute="centerY" secondItem="RQe-nG-tD8" secondAttribute="centerY" id="eoO-0o-GZH"/>
+                        <constraint firstItem="PoJ-sI-X0p" firstAttribute="centerX" secondItem="RQe-nG-tD8" secondAttribute="centerX" identifier="0" id="gIR-CA-oTf"/>
+                        <constraint firstItem="PoJ-sI-X0p" firstAttribute="height" secondItem="RQe-nG-tD8" secondAttribute="height" id="j4I-yp-b9O"/>
+                        <constraint firstItem="LRw-lX-MPs" firstAttribute="top" secondItem="y9I-vr-eod" secondAttribute="top" id="j9c-qu-y3d"/>
+                        <constraint firstItem="PoJ-sI-X0p" firstAttribute="centerX" secondItem="ko3-4g-P8j" secondAttribute="centerX" priority="999" identifier="1" id="kOY-S4-xEQ"/>
+                        <constraint firstAttribute="bottom" secondItem="LRw-lX-MPs" secondAttribute="bottom" id="krq-6d-YzT"/>
+                        <constraint firstItem="LRw-lX-MPs" firstAttribute="leading" secondItem="ONI-Tq-c9g" secondAttribute="leading" id="zdL-xw-Ekk"/>
+                    </constraints>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="-1094" y="-105"/>
+        </scene>
+        <!--HomeViewController-->
+        <scene sceneID="Nw0-DU-dV6">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" referencedIdentifier="HomeViewController" id="qPe-CP-tv4" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Vi9-y1-AsS"/>
+                    <navigationItem key="navigationItem" id="3cF-32-1QR"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EmN-Jb-gRJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2463" y="418"/>
+        </scene>
+        <!--SearchViewController-->
+        <scene sceneID="his-XF-YJz">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Search" referencedIdentifier="SearchViewController" id="oJy-jl-Nj0" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="eMp-XE-kc0"/>
+                    <navigationItem key="navigationItem" id="UjI-kV-KT7"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gEH-33-Odm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1095" y="417"/>
+        </scene>
+        <!--WatchlistViewController-->
+        <scene sceneID="kW2-gi-4C2">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Watchlist" referencedIdentifier="WatchlistViewController" id="bDc-VQ-QBf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="VKJ-Mg-5tX"/>
+                    <navigationItem key="navigationItem" id="6r6-80-F9g"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FoX-vB-kEY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="156" y="417"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="HomeActive" width="30" height="30"/>
+        <image name="Search" width="30" height="30"/>
+        <image name="Watchlist" width="30" height="30"/>
+        <namedColor name="AppLightBlack">
+            <color red="0.12941176470588237" green="0.12941176470588237" blue="0.12941176470588237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
